@@ -1,4 +1,4 @@
-# Project-3
+
 Data Visualization track
 
 On this project we aim to show the data collected on emissions and waste management from Oil and Gas over the years and per capita.

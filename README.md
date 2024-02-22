@@ -7,3 +7,4 @@ The Toxics Release Inventory (TRI) tracks the management of certain toxic chemic
 
 Data exploration: For the analysis, we used the following official website for the Environmental Protection Agency.
 
+Team Members: Carolina Menegoli Trina Alaniz Iryna Balanivska Laura Lang Frances Zhu

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lone Star Energy Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            background-color: #004d99; /* Dark blue background */
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center navbar links horizontally */
+        }
+        .navbar a {
+            flex-grow: 1; /* Equal width for each link */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
+        .navbar a:hover, .navbar a:focus {
+            background-color: #66ccff; /* Lighter blue on hover/focus */
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            text-align: center; /* Center content text */
+        }
+        .section {
+            display: none;
+        }
+        .chart-placeholder {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .chart-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+        .chart {
+            margin: 20px 0;
+        }
+        .text-content {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .text-content ul {
+            text-align: left;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#visual-analysis">Visual Analysis</a>
+    <a href="#statistical-analysis">Statistical Analysis</a>
+    <a href="#findings">Findings</a>
+</div>
+
+<div class="content">
+    <div id="visual-analysis" class="section">
+        <h2>Visual Analysis</h2>
+        <div class="chart">
+            <img src="https://via.placeholder.com/600x300.png?text=Bar+Chart+Placeholder" alt="Bar Chart Placeholder">
+            <div class="text-content">
+                <p>This bar chart illustrates the correlation between state GDP and toxic waste emissions within the petroleum industry. Key insights include:</p>
+                <ul>
+                    <li>Variations in economic output directly influence emission levels.</li>
+                    <li>States with higher GDP tend to have stricter waste management protocols.</li>
+                    <li>Comparative analysis reveals significant discrepancies in environmental policies.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="chart">
+            <img src="https://via.placeholder.com/600x300.png?text=Pie+Chart+Placeholder" alt="Pie Chart Placeholder">
+            <div class="text-content">
+                <p>This pie chart displays the proportion of waste management strategies employed across various states. Observations suggest:</p>
+                <ul>
+                    <li>A predominant reliance on traditional disposal methods.</li>
+                    <li>Emerging trends in recycling and sustainable practices.</li>
+                    <li>Notable differences in state-level investment in green technologies.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="statistical-analysis" class="section">
+        <h2>Statistical Analysis</h2>
+        <div class="chart">
+            <img src="https://via.placeholder.com/600x300.png?text=Map+Placeholder" alt="Map Placeholder">
+            <div class="text-content">
+                <p>This map highlights the geographic distribution of toxic waste emissions. Analysis reveals:</p>
+                <ul>
+                    <li>High-emission zones correlate with major industrial hubs.</li>
+                    <li>Geographical factors significantly impact waste management efficiency.</li>
+                    <li>Regional disparities in environmental regulation enforcement.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="findings" class="section">
+        <h2>Findings</h2>
+        <div class="chart">
+            <img src="https://via.placeholder.com/600x300.png?text=Data+Visualization+Placeholder" alt="Data Visualization Placeholder">
+            <div class="text-content">
+                <p>Our comprehensive analysis synthesizes data visualizations to draw critical conclusions on the interplay between economic activity, environmental impact, and regulatory frameworks. Highlights include:</p>
+                <ul>
+                    <li>The necessity for integrated approaches to waste management.</li>
+                    <li>The role of economic incentives in promoting sustainable practices.</li>
+                    <li>Policy recommendations for balancing industrial growth with environmental stewardship.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// JavaScript to show the section when its corresponding navbar link is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.section');
+    window.onhashchange = function() {
+        sections.forEach(section => {
+            if(section.id === location.hash.slice(1)) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    };
+    // Trigger hashchange on initial load to show the default section
+    window.dispatchEvent(new Event('hashchange'));
+});
+</script>
+
+</body>
+</html>

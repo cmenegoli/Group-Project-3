@@ -7,32 +7,33 @@
     <title>Lone Star Energy Dashboard</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #fafafa;
         }
         .navbar {
-            background-color: #004d99; /* Dark blue background */
+            background-color: #34568B; /* Bright blue background */
             overflow: hidden;
             display: flex;
-            justify-content: center; /* Center navbar links horizontally */
+            justify-content: space-around; /* Space out navbar links */
             position: fixed;
             width: 100%;
             top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
         .navbar a {
-            flex-grow: 1; /* Equal width for each link */
             display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
-            transition: background-color 0.3s; /* Smooth background color transition */
+            transition: background-color 0.3s, color 0.2s; /* Smooth transition for hover effects */
         }
         .navbar a:hover, .navbar a:focus {
-            background-color: #66ccff; /* Lighter blue on hover/focus */
-            color: black;
+            background-color: #5D8AA8; /* Darker blue on hover/focus */
+            color: #ffffff;
         }
         .landing-page {
             display: flex;
@@ -40,38 +41,43 @@
             align-items: center;
             height: 100vh;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url('https://via.placeholder.com/1200x800?text=Landing+Page+Background') no-repeat center center/cover;
+            background: linear-gradient(rgba(52, 86, 139, 0.6), rgba(52, 86, 139, 0.6)), url('https://images.unsplash.com/photo-1565372195450-6a6c45e4b25f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             color: white;
+            padding-top: 60px;
         }
         .content {
-            padding-top: 60px; /* Offset for fixed navbar */
-            text-align: center; /* Center content text */
+            padding-top: 100px; /* Offset for fixed navbar */
         }
         .section {
             display: none;
-        }
-        .chart-placeholder {
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 20px 0;
-            text-align: center;
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+            border-radius: 8px;
+            max-width: 80%;
         }
         .chart-placeholder img {
             max-width: 100%;
             height: auto;
+            border-radius: 5px;
         }
         .chart {
             margin: 20px 0;
         }
         .text-content {
             text-align: left;
-            margin: 20px auto;
-            max-width: 600px;
+            margin: 20px;
         }
         .text-content ul {
             text-align: left;
             list-style-position: inside;
+        }
+        h1, h2 {
+            color: #34568B;
+        }
+        p, li {
+            color: #444;
         }
     </style>
 </head>
@@ -85,15 +91,14 @@
 </div>
 
 <div class="landing-page" id="landing">
-    <div>
-        <h1>Welcome to the Lone Star Energy Dashboard</h1>
-        <p>Explore the impact of Texas's petroleum industry on economy and environment.</p>
+    <div style="max-width: 900px; background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h1>Lone Star Energy: A Glimpse into Texas's Petroleum Power</h1>
+        <p>Delve into the dynamic interplay between economic prosperity and environmental stewardship within Texas's towering petroleum sector.</p>
     </div>
 </div>
 
 <div class="content">
     <div id="visual-analysis" class="section">
-        
 <h2>Visual Analysis</h2>
 <div class="text-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel fringilla dictum, ligula justo consequat massa, non porta nisi orci non nisi. In hac habitasse platea dictumst.</p>
@@ -105,11 +110,9 @@
 </div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Bar+Chart+Placeholder"></div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Pie+Chart+Placeholder"></div>
-
-    </div>
+</div>
     
     <div id="statistical-analysis" class="section">
-        
 <h2>Statistical Analysis</h2>
 <div class="text-content">
     <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
@@ -121,11 +124,9 @@
 </div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Heat+Map+Placeholder"></div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Correlation+Graph+Placeholder"></div>
-
-    </div>
+</div>
     
     <div id="findings" class="section">
-        
 <h2>Findings</h2>
 <div class="text-content">
     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -136,8 +137,7 @@
     </ul>
 </div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Data+Visualization+Placeholder"></div>
-
-    </div>
+</div>
 </div>
 
 <script>

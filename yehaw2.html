@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lone Star Energy Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            background-color: #004d99; /* Dark blue background */
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center navbar links horizontally */
+        }
+        .navbar a {
+            flex-grow: 1; /* Equal width for each link */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
+        .navbar a:hover, .navbar a:focus {
+            background-color: #66ccff; /* Lighter blue on hover/focus */
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            text-align: center; /* Center content text */
+        }
+        .section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#visual-analysis">Visual Analysis</a>
+    <a href="#statistical-analysis">Statistical Analysis</a>
+    <a href="#findings">Findings</a>
+</div>
+
+<div class="content">
+    <div id="visual-analysis" class="section">
+        <h2>Visual Analysis</h2>
+        <p>Sample text</p>
+    </div>
+    
+    <div id="statistical-analysis" class="section">
+        <h2>Statistical Analysis</h2>
+        <p>Sample text</p>
+    </div>
+    
+    <div id="findings" class="section">
+        <h2>Findings</h2>
+        <p>Sample text</p>
+    </div>
+</div>
+
+<script>
+// JavaScript to show the section when its corresponding navbar link is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.section');
+    window.onhashchange = function() {
+        sections.forEach(section => {
+            if(section.id === location.hash.slice(1)) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    };
+    // Trigger hashchange on initial load to show the default section
+    window.dispatchEvent(new Event('hashchange'));
+});
+</script>
+
+</body>
+</html>

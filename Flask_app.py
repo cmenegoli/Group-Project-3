@@ -7,7 +7,7 @@ print(sqlalchemy.__version__)
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 #################################################
@@ -41,12 +41,15 @@ class Production(Base):
 app = Flask(__name__)
 # Define what to do when the user hits the homepage
 @app.route("/")
-def welcome():
-    """List all available api routes."""
-    return (
-        f"Available Routes:<br/>"
-        f"/api/v1.0/selectstate<br/>"
-    )
+
+#    """List all available api routes."""
+#    return (
+#        f"Available Routes:<br/>"
+#        f"/api/v1.0/selectstate<br/>"
+#    )
+def home():
+    return render_template('websiteInProgress.html')
+    
 
 @app.route("/api/v1.0/selectstate")        
 def alldata():

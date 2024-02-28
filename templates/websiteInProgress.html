@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lone Star Energy Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
     @keyframes fadeIn {
         from { opacity: 0; }
@@ -75,7 +76,7 @@
         }
         .text-content {
             text-align: left;
-            margin: 20px;
+            margin: 100px;
         }
         .text-content ul {
             text-align: left;
@@ -111,12 +112,15 @@
 <div class="text-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel fringilla dictum, ligula justo consequat massa, non porta nisi orci non nisi. In hac habitasse platea dictumst.</p>
     <ul>
-        <li>Analysis of emissions over time</li>
+        <li>Analysis of production over time</li>
         <li>Comparison of GDP growth and emissions</li>
         <li>Impact of waste management practices</li>
     </ul>
+</div> 
+<div>
+    <object style="border: none;"standby="loading" id="contentarea" width=" 800" height="600" data="..\bar.html" type="text/html"></object>
+    
 </div>
-<div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Bar+Chart+Placeholder"></div>
 <div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Pie+Chart+Placeholder"></div>
 </div>
     
@@ -125,13 +129,16 @@
 <div class="text-content">
     <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
     <ul>
-        <li>Correlation between GDP and emissions</li>
+        <li>Correlation between GDP and produciotn waste in Petroleum</li>
         <li>Trend analysis of toxic waste management</li>
         <li>Forecasting future industry impacts</li>
     </ul>
 </div>
-<div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Heat+Map+Placeholder"></div>
-<div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Correlation+Graph+Placeholder"></div>
+<div>
+    <object style="border: none;"standby="loading" id="contentarea" width=" 1000" height="800" data="..\index.html" type="text/html"></object>
+    
+</div>
+<div class="chart-placeholder"><img src="https://via.placeholder.com/600x300?text=Management+Graph+Placeholder"></div>
 </div>
     
     <div id="findings" class="section">
@@ -172,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.dispatchEvent(new Event('hashchange'));
 });
 </script>
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="barplots.js"></script>
 </body>
 </html>

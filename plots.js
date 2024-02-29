@@ -31,7 +31,7 @@ let trace2={
   type:"scatter",
   textposition: 'top center',
   marker:{
-    size:80,
+    size:100,
     color:'rgb(142, 124, 195)',
   }
 };
@@ -44,7 +44,7 @@ let trace3={
   type:"scatter",
   textposition: 'top center',
   marker:{
-    size:50,
+    size:70,
     color:'rgb(234, 153, 153)',
   }
 };
@@ -57,7 +57,7 @@ let trace4={
   type:"scatter",
   textposition: 'top center',
   marker:{
-    size:50,
+    size:70,
     color:'rgb(255, 217, 102)',
   }
   
@@ -71,7 +71,7 @@ let trace5={
   type:"scatter",
   textposition: 'top center',
   marker:{
-    size:50,
+    size:70,
     color:'rgb(32,178,170)',
   }
   
@@ -79,6 +79,9 @@ let trace5={
   // The data array consists of both traces
 let data = [trace1,trace2,trace3,trace4,trace5];
 let layout={
+ // showlegend:false,orientation: 'v', x: -0.3
+ width:900,
+ height:600,
   showlegend:false,
   title:{
     text:'Top 20 State Production waste in petroleum  vs. GDP',

@@ -60,7 +60,7 @@ def alldata():
     state_list = list(np.ravel(result1))
     return jsonify(state_list)
 
-@app.route("/api/v1.0/piechart")        
+@app.route("/api/v1.0/pieChartDiv")        
 def piedata():
     session=Session(engine)
     result1=session.query(Production.State, Production.Production_WSTE).all()

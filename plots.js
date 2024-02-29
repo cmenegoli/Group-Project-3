@@ -112,26 +112,3 @@ let layout={
   // Note that we omitted the layout object this time
   // This will use default parameters for the layout
 Plotly.newPlot("plot", data,layout);
-  
-Plotly.newPlot("pie", data, layout);
-
-
-let pie_url = 'http://127.0.0.1:3009/api/v1.0/piechart'
-
-d3.json(pie_url).then((data2) => {
-
-  console.log(data2)
-  
-  let states = data2.keys()
-  let prod_waste = data2.values()
-  var pie_data = [
-    {
-      labels: states, // Use labels for categories
-      values: prod_waste, // Use values for numerical data
-      type: 'pie'
-    }
-  ];
-  
-  Plotly.newPlot('pie', pie_data);
-  
-})

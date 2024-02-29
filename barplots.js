@@ -50,7 +50,9 @@ let trace1 = {
   
   let layout = {
     width:800,
-    height:470,
+    height:570,
+    hovermode:'closet',
+    legend: {orientation: 'h', y: -0.3},
 
     barmode: 'stack',
     title :{

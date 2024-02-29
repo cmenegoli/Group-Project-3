@@ -60,7 +60,18 @@ def alldata():
     state_list = list(np.ravel(result1))
     return jsonify(state_list)
 
+@app.route("/api/v1.0/piechart")        
+def piedata():
+    session=Session(engine)
+    result1=session.query(Production.State, Production.Production_WSTE).all()
+    session.close()
+    # Convert list of tuples into normal list
+    waste_dict = {state: prod_waste for state, prod_waste in result1}
+    return jsonify(waste_dict)
+
         # Define main branch 
 if __name__ == "__main__":
     app.run(debug = True)
+    
+    
 

@@ -49,6 +49,12 @@ let trace1 = {
   let data = [trace1,trace2,trace3,trace4];
   
   let layout = {
+
+    width:800,
+    height:570,
+    hovermode:'closet',
+    legend: {orientation: 'h', y: -0.3},
+
     barmode: 'stack',
     title :{
       text:'<b>Production-Related Waste Managed,<br>Petroleum,2017 - 2022<b>',

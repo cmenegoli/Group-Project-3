@@ -18,7 +18,7 @@ var data = [{
 
 var layout = {
   title: {
-    text: 'Production-Related Waste Managed, Texas',
+    text: '<b>Production-Related Waste Managed,<br> Texas - 2022<b>',
     position: 'top center'
   },
   showlegend: true,

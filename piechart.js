@@ -1,19 +1,36 @@
-
-let pie_url = 'http://127.0.0.1:3009/api/v1.0/pieChartDiv'
-
-// Data for the pie chart for Texas waste management
+// Data for the pie chart for Texas waste management with updated style to match the new picture
 var data = [{
-  values: [158974400, 16309950, 113585100, 22162810], // Corresponding values for Energy_Recovery, Recycling, Treatment, Total_Releases
+  values: [158974400, 16309950, 113585100, 22162810], // Corresponding values
   labels: ['Energy_Recovery', 'Recycling', 'Treatment', 'Total_Releases'], // Categories
   type: 'pie',
-  hole: .4, // For a donut chart
+  textinfo: 'label+percent',
   hoverinfo: 'label+percent',
-  textinfo: 'label+value'
+  textposition: 'inside',
+  marker: {
+    // Colors based on the provided legend image
+    colors: ['rgb(176,224,230)', 'rgb(60,179,113)', 'rgb(245,222,179)', 'rgb(255,0,0)'], // green, skyblue, wheat, red
+    line: {
+      color: '#FFFFFF',
+      width: 2
+    }
+  }
 }];
 
 var layout = {
-  title: 'Distribution of Waste Management Categories in Texas',
-  showlegend: true
+  title: {
+    text: '<b>Production-Related Waste Managed,<br> Texas - 2022<b>',
+    position: 'top center'
+  },
+  showlegend: true,
+  legend: {
+    xanchor: 'center',
+    yanchor: 'top',
+    y: -0.1, // Adjust the legend's position to be a bit higher
+    x: 0.5
+  },
+  font: {
+    family: 'Arial, sans-serif'
+  }
 };
 
 Plotly.newPlot('pieChartDiv', data, layout);

@@ -49,6 +49,7 @@ let trace1 = {
   let data = [trace1,trace2,trace3,trace4];
   
   let layout = {
+
     width:800,
     height:570,
     hovermode:'closet',

@@ -11,7 +11,7 @@ var data = [{
     colors: ['rgb(176,224,230)', 'rgb(60,179,113)', 'rgb(245,222,179)', 'rgb(255,0,0)'], // green, skyblue, wheat, red
     line: {
       color: '#FFFFFF',
-      width: 2
+      width: 3
     }
   }
 }];

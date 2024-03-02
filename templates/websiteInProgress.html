@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lone Star Energy Dashboard</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
     @keyframes fadeIn {
         from { opacity: 0; }
@@ -65,6 +66,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,.3);
             border-radius: 15px;
             max-width: 80%;
+            
         }
         .chart-placeholder img {
             max-width: 100%;
@@ -90,7 +92,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgb(202, 230, 231); padding: 0 10px;">
 
 <div class="navbar">
     <a href="#landing">Home</a>
@@ -117,13 +119,19 @@
         <li>Impact of waste management practices</li>
     </ul>
 </div> 
-<div>
-    <object style="border: none;"standby="loading" id="contentarea" width=" 850" height="600" data="..\bar.html" type="text/html"></object>
+
+        <div id="bar"></div>
+        <div id="pieChartDiv"></div>
+
+</div>
+<!--<div>
+    <object style="border: none;"standby="loading" id="contentarea" width=" 1200" height="800" data="bar.html" type="text/html"></object>
     
 </div>
 <div>
-    <object style="border: none;"standby="loading" id="contentarea" width=" 1000" height="800" data="..\piechart.html" type="text/html"></object>  
+    <object style="border: none;"standby="loading" id="contentarea" width=" 1000" height="800" data="piechart.html" type="text/html"></object>  
 </div>
+-->
 </div>
     
     <div id="statistical-analysis" class="section">
@@ -136,9 +144,12 @@
         <li>Forecasting future industry impacts</li>
     </ul>
 </div>
-<div>
-    <object style="border: none;"standby="loading" id="contentarea" width=" 1000" height="800" data="..\index.html" type="text/html"></object>
+<!--<div>
+    <object style="border: none;"standby="loading" id="contentarea" width=" 1000" height="800" data="index.html" type="text/html"></object>
 </div>
+-->
+<div id="plot"></div>
+        <script src="../static/Dashboard.js"></script>
 </div>
 
 </div>
@@ -158,6 +169,7 @@
 </div>
 
 <script>
+
 // JavaScript for showing sections based on navigation
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.section');
@@ -182,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript" src="barplots.js"></script>
+<script type="text/javascript" src="../static/barplots.js"></script>
+<script src="../static/barplots.js" charset="utf-8"></script> 
 </body>
 </html>

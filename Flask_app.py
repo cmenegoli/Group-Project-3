@@ -40,16 +40,19 @@ class Production(Base):
 #################################################
 app = Flask(__name__)
 # Define what to do when the user hits the homepage
-@app.route("/")
+##@app.route("/")
 
 #    """List all available api routes."""
 #    return (
 #        f"Available Routes:<br/>"
 #        f"/api/v1.0/selectstate<br/>"
 #    )
-def home():
-    return render_template('websiteInProgress.html')
+#def home():
+ #   return render_template('websiteInProgress.html')
     
+@app.route("/")
+def web():
+    return render_template('Dashboard.html')
 
 @app.route("/api/v1.0/selectstate")        
 def alldata():

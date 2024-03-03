@@ -17,6 +17,8 @@ var data = [{
 }];
 
 var layout = {
+  width:100,
+  height:170,
   title: {
     text: '<b>Production-Related Waste Managed,<br> Texas - 2022<b>',
     position: 'top center'

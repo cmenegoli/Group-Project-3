@@ -53,6 +53,9 @@ app = Flask(__name__)
 @app.route("/")
 def web():
     return render_template('Dashboard.html')
+@app.route('/map')
+def map():
+    return render_template('texas_petroleum_cluster_map.html')
 
 @app.route("/api/v1.0/selectstate")        
 def alldata():

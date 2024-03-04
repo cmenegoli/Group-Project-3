@@ -1,0 +1,26 @@
+import pandas as pd
+import folium
+from folium.plugins import HeatMap
+
+# Load the spreadsheet data
+file_path = '/mnt/data/ultraclean.xlsx'
+data = pd.read_excel(file_path)
+
+# Filter the data for 'Petroleum' facilities with total releases over 1000
+petroleum_data = data[(data['20. INDUSTRY SECTOR'] == 'Petroleum') & (data['104. TOTAL RELEASES'] > 1000)]
+
+# Selecting the relevant columns for latitude and longitude
+petroleum_locations = petroleum_data[['12. LATITUDE', '13. LONGITUDE']]
+
+# Create a base map
+m = folium.Map(location=[petroleum_locations['12. LATITUDE'].mean(), 
+                         petroleum_locations['13. LONGITUDE'].mean()], 
+               zoom_start=5, control_scale=True)
+
+# Create a HeatMap layer
+heat_map = HeatMap(petroleum_locations, radius=15)
+m.add_child(heat_map)
+
+# Save to HTML file
+heatmap_html = '/mnt/data/petroleum_heatmap.html'
+m.save(heatmap_html)

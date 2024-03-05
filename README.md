@@ -19,6 +19,13 @@ along with a detailed summary, the project offers valuable insights into waste m
 practices over time, correlating these with Gross Domestic Product (GDP) to provide a nuanced 
 view of the industry's impact and potential policy implications.
 
+
+Data Sources and Ethical Considerations
+
+In conducting this data visualization project, we have carefully considered the ethical implications of working with environmental data. We understand the sensitivity and potential impact of the information presented, as it relates to public health and environmental integrity. Data used in this project is sourced responsibly from the Environmental Protection Agency's TRI Explorer ([TRI Explorer](https://enviro.epa.gov/triexplorer/industry.html?pYear=2022&pLoc=324&pParent=TRI&pDataSet=TRIQ1)), ensuring accuracy and reliability. The TRI tracks the management of toxic chemicals that may pose a significant threat to human health and the environment. In our analysis and visualization, we strive to maintain the integrity of the data, providing an unbiased and factual representation of emissions and waste management from the oil and gas sector. We commit to transparency in our methodology and open communication of our findings, recognizing the importance of such data in fostering informed decisions and actions by stakeholders and the public at large. By highlighting trends and insights through our visualizations, we aim to contribute positively to the discourse on environmental management and encourage responsible environmental stewardship.
+
+
+
 Features
 1. Production-Related Waste Managed, Petroleum, 2017–2022
 An interactive stacked bar chart presents the management of production-related waste in the 
@@ -72,9 +79,6 @@ of managing production-related waste, with minimal direct releases into the envi
 
 
 
-Data Sources and Ethical Considerations
-
-In conducting this data visualization project, we have carefully considered the ethical implications of working with environmental data. We understand the sensitivity and potential impact of the information presented, as it relates to public health and environmental integrity. Data used in this project is sourced responsibly from the Environmental Protection Agency's TRI Explorer ([TRI Explorer](https://enviro.epa.gov/triexplorer/industry.html?pYear=2022&pLoc=324&pParent=TRI&pDataSet=TRIQ1)), ensuring accuracy and reliability. The TRI tracks the management of toxic chemicals that may pose a significant threat to human health and the environment. In our analysis and visualization, we strive to maintain the integrity of the data, providing an unbiased and factual representation of emissions and waste management from the oil and gas sector. We commit to transparency in our methodology and open communication of our findings, recognizing the importance of such data in fostering informed decisions and actions by stakeholders and the public at large. By highlighting trends and insights through our visualizations, we aim to contribute positively to the discourse on environmental management and encourage responsible environmental stewardship.
 
 
 Repository Structure
